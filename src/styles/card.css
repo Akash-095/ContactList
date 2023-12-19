@@ -1,0 +1,23 @@
+.card-cont{
+ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    width: 90%;
+    margin-left: 3%;
+    border: 1px solid rgba(197, 195, 195, 0.459);
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1rem;
+    background-color: rgba(221, 220, 220, 0.719);
+    color: black;
+   
+
+}
+
+
+.ed{
+    display: flex;
+    gap: 2rem;
+}
+
