@@ -3,7 +3,9 @@ import ContactContext from '../context/ContactContext'
 
 const Create = ({ onClose }) => {
     const contact = useContext(ContactContext);
-    const { addContact } = contact;
+    const { addContact, getContact } = contact;
+
+
 
     const [cont, setCont] = useState({
         firstname: "",
@@ -24,8 +26,9 @@ const Create = ({ onClose }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addContact(cont.firstname, cont.cnum, cont.Prof, cont.city, cont.country, cont.dob, cont.gender, cont.lang, cont.lastname, cont.mail, cont.marital, cont.state, cont.zip);
+        addContact(cont.firstname, cont.cnum, cont.Prof, cont.city, cont.country, cont.dob.toISOString, cont.gender, cont.lang, cont.lastname, cont.mail, cont.marital, cont.state, cont.zip);
         onClose();
+        getContact();
 
         setCont({
             firstname: "", lastname: "", dob: "", marital: "", Prof: "", gender: "", cnum: "", mail: "", lang: "", add: "", zip: "", city: "", state: "", country: ""

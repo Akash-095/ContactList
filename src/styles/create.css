@@ -89,3 +89,9 @@
     align-items: center;
     color: white;
 }
+
+
+.TableHead div{
+    cursor: pointer;
+    font-weight: 800;
+}

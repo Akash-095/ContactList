@@ -5,14 +5,14 @@ const Card = (props) => {
     const contact = useContext(ContactContext);
     const { deleteContact } = contact;
 
-    const { firstname, cnum, mail, date } = props.state;
+    const { firstname, cnum, mail, dob } = props.state;
 
     return (
         <div className='card-cont'>
             <div>{firstname}</div>
             <div>{cnum}</div>
             <div>{mail ? mail : "-"}</div>
-            <div>{props.state._id}</div>
+            <div>{dob ? dob : "-"}</div>
             <div className='ed'>
                 <div><i className="fa-regular fa-pen-to-square fa-xl" style={{ color: '#1764e8' }}></i></div>
                 <div><i className="fa-regular fa-trash-can fa-xl" style={{ color: "#f51924" }} onClick={() => { deleteContact(props.state._id) }}></i></div>
